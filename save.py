@@ -13,5 +13,5 @@ with open("temp.bin", "rb") as binary_file:
     of.data = bytearray(binary_file.read())
 # Save/encrypt the option file
 print("Saving option file...")
-of.save_option_file('pes3test')
+of.save_option_file()
 print("Option file saved.")
