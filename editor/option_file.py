@@ -84,26 +84,6 @@ class OptionFile:
             else:
                 key = 0
 
-    def checksums(self):
-        self.sum8(8, 3496);
-        self.sum8(4112, 1832);
-        self.sum8(5952, 2784);
-        self.sum8(8744, 22816);
-        self.sum8(31568, 620000);
-        self.sum8(651576, 145786);
-        self.sum8(797372, 19320);
-        self.sum8(816700, 105408);
-        self.sum8(922116, 266240);
-        self.sum8(1188364, 75372);
-
-    def sum8(self, start, length):
-        sum8 = 0;
-        for a in range(length):
-            sum8 += self.data[start + a];
-        sum8 &= 0xFF;
-        self.data[start - 4] = (sum8);
-
-
     def set_clubs(self):
         """
         Load all clubs from OF data and add to clubs list.
